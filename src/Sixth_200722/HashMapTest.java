@@ -18,7 +18,7 @@ class Person {
     public String toString() {
         return "Person{" +
                 "age=" + age +
-                ", name=" + name + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
@@ -39,8 +39,8 @@ public class HashMapTest {
                 "아", "자", "차", "카", "타", "파", "하"
         };
 
-        for(int i = 0; i < 3; i++) {
-            retStr += strArr[rand.nextInt(14)];
+        for(int i = START; i < MAX; i++) {
+            retStr += strArr[rand.nextInt(RANGE)];
         }
 
         return retStr;
@@ -71,17 +71,17 @@ public class HashMapTest {
 
         System.out.println(p);
 
-        // HashMap에서 특정 인덱스의 원소 제거
         // 4번 제거
+        // HashMap에서 특정 인덱스의 원소 제거
         p.remove(4);
-        // put()을 통해서 데이터 교체가 가능하다는 점
         // 3번 데이터 교체
+        // put()을 통해서 데이터 교체가 가능하다는 점
         p.put(3, new Person(
                 3, "안녕"
         ));
         System.out.println(p);
 
-        // Map.Entry를 사용하여 실제 HashMap에 있는 정보들중
+        // Map.Entry를 사용하여 실제 HashMap에 있는 정보들을
         // 한개씩 얻어올 수 있다.
         // p.entrySet()이 정보를 한 개씩 준다(Hash 정보)
         // Hash 정보란 (Key, Value)로 구성된 데이터

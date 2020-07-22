@@ -38,6 +38,7 @@ class ProbSupporter {
         for(int i = START; i < MAX; i++) {
             // 특정 인덱스의 원소 가져오기(elementAt())
             idx = elem.elementAt(i) - 10;
+            //idx = elem.elementAt(i);
             //System.out.println("흐름확인용" + elem.elementAt(i));
             tmp = freq.elementAt(idx);
 
@@ -59,7 +60,7 @@ class ProbSupporter {
         for(int i = START; i < MAX; i++) {
             retStr += elem.elementAt(i);
 
-            if(i != MAX -1) {
+            if(i != MAX - 1) {
                 retStr += ", ";
             } else {
                 retStr += "]";
