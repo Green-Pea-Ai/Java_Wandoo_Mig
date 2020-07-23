@@ -1,8 +1,5 @@
 package Fifth_200721;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
 class Vehicle {
     private int speed = 10;
     private String color = "green";

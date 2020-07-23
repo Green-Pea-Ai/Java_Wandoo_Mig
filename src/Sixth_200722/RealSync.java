@@ -1,6 +1,7 @@
 package Sixth_200722;
 
 class Bank3 {
+    // Critical Section(크리티컬 섹션)
     private int money = 10000;
 
     public int getMoney() { return money; }
@@ -76,3 +77,8 @@ public class RealSync {
     }
 
 }
+
+// 숙제 (조건, 클래스를 작성하자!)
+// 0. 복습
+// 1. 자바로 y = exp(x) 정적분을 구현해보자 ~
+// 2. Thread를 사용하여 y = exp(x) 정적분을 구현해보자 ~

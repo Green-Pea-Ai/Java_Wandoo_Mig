@@ -8,7 +8,10 @@ class Bank2 {
         return money;
     }
 
-// 3000 * 1000 = 300 0000
+    // 3000 * 1000 = 300 0000
+    // 매서드에 sync를 달면 데이터의 크리티컬 섹션은 없지만 정상적인 방법은 아니다.
+    // 계산을 잡고 있는 동안 다른 매서드들이 일을 못한다.
+    // RealSync 클래스에서 개선됨
     public synchronized void saveMoney(int save) {
         for(int i = 0; i < 1000; i++) {
             int m = this.getMoney();
@@ -43,17 +46,19 @@ class Bank2 {
 
 class C extends Thread {
     public void run() {
-        NoSyncTest.myPrivateBank.saveMoney(3000);
+        // NoSyncTest의 정보를 호출하고 있었는데(뇌절)
+        // SyncTest로 변경하였음
+        SyncTest.myPrivateBank.saveMoney(3000);
         System.out.println("saveMoney(3000): " +
-                NoSyncTest.myPrivateBank.getMoney());
+                SyncTest.myPrivateBank.getMoney()); // 여기 노씽크로 바꿔도 뭔가 나오긴함
     }
 }
 
 class D extends Thread {
     public void run() {
-        NoSyncTest.myPrivateBank.useMoney(1000);
+        SyncTest.myPrivateBank.useMoney(1000);
         System.out.println("useMoney(1000): " +
-                NoSyncTest.myPrivateBank.getMoney());
+                SyncTest.myPrivateBank.getMoney()); // 여기 노씽크로 바꿔도 뭔가 나오긴함
     }
 }
 
