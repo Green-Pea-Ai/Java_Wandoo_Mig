@@ -8,7 +8,7 @@ import java.util.ListIterator;
 public class PT_ArrayList {
 
     private int size = 0;
-    private Object[] elementData = new Object[100];
+    private final Object[] elementData = new Object[100];
 
     public PT_ArrayList() {
 
