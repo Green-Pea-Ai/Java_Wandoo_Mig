@@ -1,6 +1,8 @@
+// 200816 Sat
 package Personal_Training;
 
 class WD_Overloading {
+
     void car() {
         System.out.println("자동차");
     }
@@ -9,8 +11,8 @@ class WD_Overloading {
         System.out.println("자동차의 속력 : " + a + "km, " + b + "km");
     }
 
-    void car(String c) {
-        System.out.println("자동차 이름 : " + c);
+    void car(String a) {
+        System.out.println("자동차 이름 : " + a);
     }
 
 }
