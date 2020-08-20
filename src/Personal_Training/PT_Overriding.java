@@ -1,3 +1,4 @@
+/*
 // 200817 Sun
 package Personal_Training;
 
@@ -18,7 +19,7 @@ class Machine {
 }
 
 // child
-class Drone extends Machine {
+class Drone extends PT_Interface {
 
     String droneName;
 
@@ -48,3 +49,4 @@ public class PT_Overriding {
         drone.machine_info();
     }
 }
+*/
