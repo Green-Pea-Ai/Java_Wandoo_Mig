@@ -3,6 +3,7 @@ package Personal_Training;
 public class PT_ForExam {
 
     public static void main(String[] args) {
+        // for - 1
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < 5; j++) {
                 System.out.print("★");
@@ -12,6 +13,7 @@ public class PT_ForExam {
         System.out.println();
         System.out.println("=======================");
 
+        // for - 2
         for(int i = 1; i <= 5; i++) {
             for(int j = 1; j <= i; j++) {
                 System.out.print("★");
