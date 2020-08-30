@@ -34,8 +34,5 @@ public class PT_AntAlgo {
             }
             System.out.println(min + " " + max);
         }
-
     }
-
-
 }
